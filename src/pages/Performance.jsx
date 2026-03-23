@@ -56,7 +56,7 @@ function Performance() {
         {
             /* Stats Grid */
         }
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
                 { label: "Company Avg Score", value: "4.2", sub: "/5.0", icon: TrendingUp, gradient: "from-[#0f4184] to-[#0b3166]" },
                 { label: "Top Performers", value: "12%", sub: "of staff", icon: Star, gradient: "from-orange-400 to-rose-500" },
