@@ -14,18 +14,26 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT) {
     }
 }
 
-// Fallback to local files if the env var was not provided or failed to load
+// Fallback to local files or Render Secret Files
 if (!credential) {
-    const serviceAccountFile = process.env.NODE_ENV === 'production' 
-        ? './ServiceAccountKey-prod.json' 
-        : './ServiceAccountKey-dev.json';
-    const serviceAccountPath = path.resolve(__dirname, serviceAccountFile);
+    const possiblePaths = [
+        '/etc/secrets/firebase.json', // Render Secret File standard path
+        path.resolve(__dirname, './ServiceAccountKey-prod.json'),
+        path.resolve(__dirname, './ServiceAccountKey-dev.json')
+    ];
 
-    if (!fs.existsSync(serviceAccountPath)) {
-        console.error(`Service account key not found at ${serviceAccountPath}`);
-    } else {
-        credential = admin.credential.cert(serviceAccountPath);
+    for (let p of possiblePaths) {
+        if (fs.existsSync(p)) {
+            console.log(`Found Firebase configuration file at: ${p}`);
+            credential = admin.credential.cert(p);
+            break;
+        }
     }
+}
+
+if (!credential) {
+    console.error("CRITICAL ERROR: No valid Firebase Service Account found in Environment Variables or Secret Files.");
+    process.exit(1); // Force crash so Render logs the exact reason
 }
 
 admin.initializeApp({
