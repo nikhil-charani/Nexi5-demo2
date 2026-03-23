@@ -4,7 +4,7 @@ import { Plus, X, Search, FolderKanban, ChevronDown, ChevronRight, BarChart3, Ca
 import { useAppContext } from "../hooks/useAppContext";
 import { toast } from "sonner";
 const PROJECT_STATUS_BADGE = {
-    Active: { bg: "bg-[#22C1DC]/10", text: "text-[#0EA5B7]", dot: "bg-[#22C1DC]" },
+    Active: { bg: "bg-[#0f4184]/10", text: "text-[#0b3166]", dot: "bg-[#0f4184]" },
     "On Hold": { bg: "bg-orange-100", text: "text-orange-600", dot: "bg-orange-500" },
     Completed: { bg: "bg-emerald-100", text: "text-emerald-600", dot: "bg-emerald-500" },
     Cancelled: { bg: "bg-red-100", text: "text-red-600", dot: "bg-red-500" }
@@ -16,7 +16,7 @@ const MODULE_STATUS_BADGE = {
     Blocked: { bg: "bg-red-100", text: "text-red-600", dot: "bg-red-500" }
 };
 function ProgressBar({ value }) {
-    const color = value >= 80 ? "bg-[#0EA5B7]" : value >= 50 ? "bg-[#22C1DC]" : value >= 25 ? "bg-orange-400" : "bg-red-400";
+    const color = value >= 80 ? "bg-[#0b3166]" : value >= 50 ? "bg-[#0f4184]" : value >= 25 ? "bg-orange-400" : "bg-red-400";
     return <div className="flex items-center gap-2">
         <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
             <motion.div
@@ -98,7 +98,7 @@ function Projects() {
             {canManage && (
                 <button
                     onClick={() => setAddProjectModal(true)}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-bold bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all shadow-sm"
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-bold bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all shadow-sm"
                 >
                     <Plus size={18} /> New Project
                 </button>
@@ -110,9 +110,9 @@ function Projects() {
         }
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {[
-                { label: "Total Projects", value: visibleProjects.length, icon: Briefcase, color: "text-[#22C1DC] bg-[#22C1DC]/10" },
-                { label: "Active", value: visibleProjects.filter((p) => p.status === "Active").length, icon: FolderKanban, color: "text-[#0EA5B7] bg-[#0EA5B7]/10" },
-                { label: "Total Modules", value: allModules.length, icon: BarChart3, color: "text-[#1E3A8A] bg-[#1E3A8A]/10" },
+                { label: "Total Projects", value: visibleProjects.length, icon: Briefcase, color: "text-[#0f4184] bg-[#0f4184]/10" },
+                { label: "Active", value: visibleProjects.filter((p) => p.status === "Active").length, icon: FolderKanban, color: "text-[#0b3166] bg-[#0b3166]/10" },
+                { label: "Total Modules", value: allModules.length, icon: BarChart3, color: "text-[#0b3166] bg-[#0b3166]/10" },
                 { label: "Avg Progress", value: `${avgProgress}%`, icon: Calendar, color: "text-orange-500 bg-orange-50" }
             ].map((stat, i) => <motion.div
                 key={stat.label}
@@ -299,7 +299,7 @@ function Projects() {
                             >
                                 <div className="flex items-start justify-between mb-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#22C1DC] to-[#1E3A8A] text-white flex items-center justify-center font-bold text-sm shadow-sm">
+                                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0f4184] to-[#0b3166] text-white flex items-center justify-center font-bold text-sm shadow-sm">
                                             {project.name.charAt(0)}
                                         </div>
                                         <div>
@@ -450,7 +450,7 @@ function Projects() {
                         <button onClick={() => setAddProjectModal(false)} className="px-6 py-2.5 text-sm font-bold text-textSecondary hover:bg-gray-100 rounded-lg transition-all">Cancel</button>
                         <button
                             onClick={handleAddProject}
-                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                         >
                             Create Project
                         </button>
@@ -527,7 +527,7 @@ function Projects() {
                         <button onClick={() => setAddModuleModal(null)} className="px-6 py-2.5 text-sm font-bold text-textSecondary hover:bg-gray-100 rounded-lg transition-all">Cancel</button>
                         <button
                             onClick={() => handleAddModule(addModuleModal)}
-                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                         >
                             Add Module
                         </button>

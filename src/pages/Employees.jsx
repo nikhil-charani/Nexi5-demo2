@@ -66,8 +66,8 @@ Password: ${newCredentials.password}`);
   const getStatusBadge = (status) => {
     switch (status) {
       case "Active":
-        return <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-[#22C1DC]/10 text-[#0EA5B7]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#22C1DC]" />Active
+        return <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-[#0f4184]/10 text-[#0b3166]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0f4184]" />Active
         </span>;
       case "On Leave":
         return <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-orange-100 text-orange-600">
@@ -105,7 +105,7 @@ Password: ${newCredentials.password}`);
       {isAdminOrHRHead && (
         <button
           onClick={handleAdd}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-semibold bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all shadow-sm"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-semibold bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all shadow-sm"
         >
           <Plus size={18} />
           Add Employee
@@ -161,10 +161,10 @@ Password: ${newCredentials.password}`);
               <td className="px-6 py-4">
                 <div className="flex items-center gap-4">
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#22C1DC] to-primary flex items-center justify-center text-white text-xs font-bold shadow-sm ring-2 ring-gray-50 uppercase">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0f4184] to-primary flex items-center justify-center text-white text-xs font-bold shadow-sm ring-2 ring-gray-50 uppercase">
                       {getInitials(emp.name)}
                     </div>
-                    <span className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-white ${emp.status === "Active" ? "bg-[#22C1DC]" : emp.status === "On Leave" ? "bg-orange-400" : "bg-red-500"}`} />
+                    <span className={`absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full border-2 border-white ${emp.status === "Active" ? "bg-[#0f4184]" : emp.status === "On Leave" ? "bg-orange-400" : "bg-red-500"}`} />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-textPrimary group-hover:text-primary transition-colors">{emp.name}</p>
@@ -176,7 +176,7 @@ Password: ${newCredentials.password}`);
                 <span className="text-xs font-mono font-bold text-gray-500 bg-gray-50 px-2 py-1 rounded-lg border border-gray-100">{emp.id}</span>
               </td>
               <td className="px-6 py-4">
-                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#22C1DC]/10 text-[#0EA5B7]">{emp.department}</span>
+                <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-[#0f4184]/10 text-[#0b3166]">{emp.department}</span>
               </td>
               <td className="px-6 py-4 text-textSecondary text-sm font-medium">{emp.joiningDate}</td>
               <td className="px-6 py-4">{getStatusBadge(emp.status)}</td>

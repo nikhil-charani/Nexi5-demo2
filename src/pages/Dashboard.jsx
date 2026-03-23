@@ -87,7 +87,7 @@ const AnimatedCounter = ({ value }) => {
 };
 const iconBgMap = {
   blue: "bg-primary/10 text-primary",
-  emerald: "bg-[#22C1DC]/10 text-[#0EA5B7]",
+  emerald: "bg-[#0f4184]/10 text-[#0b3166]",
   amber: "bg-orange-100 text-orange-600",
   rose: "bg-red-100 text-red-600",
   primary: "bg-primary/10 text-primary"
@@ -108,7 +108,7 @@ const StatCard = ({ title, value, icon: Icon, trend, color, delay, onClick }) =>
         <AnimatedCounter value={value} />
       </h3>
       <div className="flex items-center gap-1.5 mt-3">
-        <span className={`inline-flex items-center gap-0.5 px-2 py-0.5 rounded-lg text-xs font-bold ${trend >= 0 ? "bg-[#22C1DC]/10 text-[#0EA5B7]" : "bg-red-100 text-red-600"}`}>
+        <span className={`inline-flex items-center gap-0.5 px-2 py-0.5 rounded-lg text-xs font-bold ${trend >= 0 ? "bg-[#0f4184]/10 text-[#0b3166]" : "bg-red-100 text-red-600"}`}>
           {trend >= 0 ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
           {Math.abs(trend)}%
         </span>
@@ -191,7 +191,7 @@ function Dashboard() {
                   <h3 className="font-semibold text-textPrimary text-base">Payroll Trend</h3>
                   <p className="text-xs text-textSecondary mt-1">Monthly expenditure in Lakhs (₹)</p>
                 </div>
-                <span className="px-3 py-1 rounded-lg text-xs font-semibold bg-[#22C1DC]/10 text-[#0EA5B7]">Last 6 months</span>
+                <span className="px-3 py-1 rounded-lg text-xs font-semibold bg-[#0f4184]/10 text-[#0b3166]">Last 6 months</span>
               </div>
               <div className="h-[280px] w-full">
                 <ResponsiveContainer width="100%" height="100%">
@@ -200,7 +200,7 @@ function Dashboard() {
                     <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
                     <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
                     <Tooltip content={<CustomTooltip />} />
-                    <Area type="monotone" dataKey="cost" stroke="#22C1DC" fill="#22C1DC20" strokeWidth={2} />
+                    <Area type="monotone" dataKey="cost" stroke="#0f4184" fill="#0f418420" strokeWidth={2} />
                   </AreaChart>
                 </ResponsiveContainer>
               </div>
@@ -223,7 +223,7 @@ function Dashboard() {
                     <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
                     <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 12, fill: '#64748B' }} />
                     <Tooltip content={<CustomTooltip />} />
-                    <Bar dataKey="present" fill="#22C1DC" radius={[4, 4, 0, 0]} />
+                    <Bar dataKey="present" fill="#0f4184" radius={[4, 4, 0, 0]} />
                     <Bar dataKey="absent" fill="#EF4444" radius={[4, 4, 0, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
@@ -267,12 +267,12 @@ function Dashboard() {
       <div className="space-y-5">
         {mockActivityFeed.slice(0, 5).map((event, i) => {
           const icons = {
-            checkin: { icon: LogIn, color: "text-[#22C1DC]", bg: "bg-[#22C1DC]/10" },
+            checkin: { icon: LogIn, color: "text-[#0f4184]", bg: "bg-[#0f4184]/10" },
             leave_applied: { icon: CalendarClock, color: "text-orange-600", bg: "bg-orange-100" },
-            leave_approved: { icon: CheckCircle2, color: "text-[#0EA5B7]", bg: "bg-[#22C1DC]/10" },
+            leave_approved: { icon: CheckCircle2, color: "text-[#0b3166]", bg: "bg-[#0f4184]/10" },
             task_update: { icon: ClipboardList, color: "text-primary", bg: "bg-primary/10" },
             new_client: { icon: UserRoundPlus, color: "text-secondary", bg: "bg-secondary/10" },
-            new_employee: { icon: UserPlus, color: "text-[#0EA5B7]", bg: "bg-[#22C1DC]/10" }
+            new_employee: { icon: UserPlus, color: "text-[#0b3166]", bg: "bg-[#0f4184]/10" }
           };
           const meta = icons[event.type] || icons.task_update;
           const EventIcon = meta.icon;
@@ -355,7 +355,7 @@ function Dashboard() {
           <button
             key={i}
             onClick={action.onClick}
-            className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${action.primary ? 'bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] text-white hover:opacity-90 shadow-sm' : 'border border-gray-200 text-textSecondary hover:bg-gray-50'}`}
+            className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${action.primary ? 'bg-gradient-to-r from-[#0f4184] to-[#0b3166] text-white hover:opacity-90 shadow-sm' : 'border border-gray-200 text-textSecondary hover:bg-gray-50'}`}
           >
             <action.icon size={18} />
             <span className="text-sm font-medium">{action.label}</span>
@@ -488,7 +488,7 @@ function Dashboard() {
                     <tr key={i} className="hover:bg-[#F0F9FF] transition-colors group">
                       <td className="px-6 py-4 font-medium text-textPrimary">{row.date}</td>
                       <td className="px-6 py-4">
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#22C1DC]/10 text-[#0EA5B7] text-xs font-bold">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#0f4184]/10 text-[#0b3166] text-xs font-bold">
                           {row.status}
                         </span>
                       </td>

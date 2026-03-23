@@ -33,7 +33,7 @@ function Clients() {
             </div>
             <button
                 onClick={openAdd}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all font-bold"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all font-bold"
             >
                 <Plus size={18} /> Add Client
             </button>
@@ -44,9 +44,9 @@ function Clients() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-                { label: "Active Partners", value: clients.length, icon: Users, color: "text-[#22C1DC] bg-[#22C1DC]/10" },
+                { label: "Active Partners", value: clients.length, icon: Users, color: "text-[#0f4184] bg-[#0f4184]/10" },
                 { label: "Industries", value: new Set(clients.map((c) => c.industry)).size, icon: Globe, color: "text-orange-500 bg-orange-50" },
-                { label: "Retention", value: "98%", icon: TrendingUp, color: "text-[#1E3A8A] bg-[#1E3A8A]/10" },
+                { label: "Retention", value: "98%", icon: TrendingUp, color: "text-[#0b3166] bg-[#0b3166]/10" },
                 { label: "Total Revenue", value: "$2.4M", icon: Building, color: "text-purple-500 bg-purple-50" }
             ].map((stat, i) => <motion.div
                 key={stat.label}
@@ -101,8 +101,8 @@ function Clients() {
                             {client.company.charAt(0)}
                         </div>
                         <div className="flex flex-col items-end gap-2 text-right">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#22C1DC]/10 text-[#0EA5B7] text-[10px] font-bold uppercase tracking-wider rounded-full border border-[#22C1DC]/20">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#22C1DC] shadow-[0_0_8px_rgba(34,193,220,0.5)]" />
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0f4184]/10 text-[#0b3166] text-[10px] font-bold uppercase tracking-wider rounded-full border border-[#0f4184]/20">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#0f4184] shadow-[0_0_8px_rgba(34,193,220,0.5)]" />
                                 Partner
                             </span>
                             <button className="p-2 text-gray-300 hover:text-textPrimary transition-colors rounded-lg hover:bg-gray-50">

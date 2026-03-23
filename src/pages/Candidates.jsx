@@ -6,7 +6,7 @@ import CandidateDrawer from "../components/drawers/CandidateDrawer";
 const STATUS_CONFIG = {
     New: { bg: "bg-blue-100", text: "text-blue-600", dot: "bg-blue-500" },
     Interviewing: { bg: "bg-orange-100", text: "text-orange-600", dot: "bg-orange-500" },
-    Offered: { bg: "bg-[#22C1DC]/10", text: "text-[#0EA5B7]", dot: "bg-[#22C1DC]" },
+    Offered: { bg: "bg-[#0f4184]/10", text: "text-[#0b3166]", dot: "bg-[#0f4184]" },
     Rejected: { bg: "bg-red-100", text: "text-red-600", dot: "bg-red-500" }
 };
 function Candidates() {
@@ -35,7 +35,7 @@ function Candidates() {
             </div>
             <button
                 onClick={() => handleOpenDrawer()}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 <UserPlus size={18} /> Add Candidate
             </button>
@@ -46,9 +46,9 @@ function Candidates() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-                { label: "Total Applicants", value: candidates.length, icon: Users, color: "text-[#22C1DC] bg-[#22C1DC]/10" },
+                { label: "Total Applicants", value: candidates.length, icon: Users, color: "text-[#0f4184] bg-[#0f4184]/10" },
                 { label: "Interviewing", value: candidates.filter((c) => c.status === "Interviewing").length, icon: Calendar, color: "text-orange-500 bg-orange-50" },
-                { label: "Offers Sent", value: candidates.filter((c) => c.status === "Offered").length, icon: Star, color: "text-[#1E3A8A] bg-[#1E3A8A]/10" },
+                { label: "Offers Sent", value: candidates.filter((c) => c.status === "Offered").length, icon: Star, color: "text-[#0b3166] bg-[#0b3166]/10" },
                 { label: "Hire Rate", value: "18%", icon: TrendingUp, color: "text-purple-500 bg-purple-50" }
             ].map((stat, i) => <motion.div
                 key={stat.label}

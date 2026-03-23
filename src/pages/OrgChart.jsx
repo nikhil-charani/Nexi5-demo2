@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Users, Building, MousePointer2, ZoomIn, ZoomOut, Maximize2 } from "lucide-react";
 import { useAppContext } from "../hooks/useAppContext";
 const DEPT_CONFIG = {
-    Executive: { gradient: "from-[#22C1DC] to-[#1E3A8A]", dot: "bg-primary", shadow: "shadow-primary/20", text: "text-white" },
+    Executive: { gradient: "from-[#0f4184] to-[#0b3166]", dot: "bg-primary", shadow: "shadow-primary/20", text: "text-white" },
     Engineering: { gradient: "from-blue-500 to-indigo-600", dot: "bg-blue-400", shadow: "shadow-blue-200", text: "text-white" },
     Marketing: { gradient: "from-orange-400 to-rose-500", dot: "bg-orange-400", shadow: "shadow-orange-200", text: "text-white" },
     Finance: { gradient: "from-emerald-400 to-teal-600", dot: "bg-emerald-400", shadow: "shadow-emerald-200", text: "text-white" },

@@ -54,7 +54,7 @@ function Payroll() {
             <button
                 onClick={handleRunPayroll}
                 disabled={running}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 {running ? <Loader2 size={18} className="animate-spin" /> : <PlayCircle size={18} />}
                 {running ? "Processing Payroll..." : "Run Payroll"}
@@ -66,7 +66,7 @@ function Payroll() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-                { label: "Processing Month", value: "October 2024", icon: IndianRupee, gradient: "from-[#22C1DC] to-[#1E3A8A]" },
+                { label: "Processing Month", value: "October 2024", icon: IndianRupee, gradient: "from-[#0f4184] to-[#0b3166]" },
                 { label: "Total Payout", value: formatINR(totalPayout), icon: CreditCard, gradient: "from-blue-500 to-indigo-600" },
                 { label: "TDS + PF Deductions", value: formatINR(totalDeductions), icon: Award, gradient: "from-orange-400 to-rose-500" }
             ].map((card, i) => <motion.div

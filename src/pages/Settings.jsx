@@ -60,7 +60,7 @@ function Settings() {
             <button
                 onClick={handleSave}
                 disabled={saving}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 {saving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
                 {saving ? "Syncing Changes..." : "Apply Changes"}
@@ -81,7 +81,7 @@ function Settings() {
                             onClick={() => setActiveTab(tab.id)}
                             className={`
                     flex items-center gap-3 px-4 py-4 rounded-2xl transition-all duration-300 text-[11px] font-bold uppercase tracking-widest group w-full text-left
-                    ${isActive ? "bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] text-white shadow-md shadow-primary/20 scale-[1.02]" : "text-textSecondary hover:text-textPrimary hover:bg-gray-50"}
+                    ${isActive ? "bg-gradient-to-r from-[#0f4184] to-[#0b3166] text-white shadow-md shadow-primary/20 scale-[1.02]" : "text-textSecondary hover:text-textPrimary hover:bg-gray-50"}
                   `}
                         >
                             <div className={`p-2 rounded-xl transition-colors ${isActive ? "bg-white/20" : "bg-gray-50 group-hover:bg-primary/10 text-textSecondary group-hover:text-primary border border-gray-100/50"}`}>
@@ -96,13 +96,13 @@ function Settings() {
                 {
                     /* Quick Context Card */
                 }
-                <div className="hidden lg:block bg-gradient-to-br from-secondary to-[#1E3A8A] p-6 rounded-[32px] text-white overflow-hidden relative shadow-lg">
+                <div className="hidden lg:block bg-gradient-to-br from-secondary to-[#0b3166] p-6 rounded-[32px] text-white overflow-hidden relative shadow-lg">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl rounded-full -mr-16 -mt-16" />
                     <ShieldCheck className="text-primary mb-4" size={36} strokeWidth={1.5} />
                     <h4 className="text-xs font-bold uppercase tracking-widest leading-tight">Platform Integrity</h4>
                     <p className="text-[10px] font-bold text-primary mt-2 uppercase tracking-tighter opacity-90">Security Health: 92% Secure</p>
                     <div className="mt-5 h-2 bg-white/10 rounded-full overflow-hidden border border-white/5">
-                        <motion.div initial={{ width: 0 }} animate={{ width: "92%" }} className="h-full bg-primary shadow-[0_0_12px_#22C1DC]" transition={{ delay: 0.5, duration: 1 }} />
+                        <motion.div initial={{ width: 0 }} animate={{ width: "92%" }} className="h-full bg-primary shadow-[0_0_12px_#0f4184]" transition={{ delay: 0.5, duration: 1 }} />
                     </div>
                     <button className="mt-8 text-[11px] font-bold uppercase tracking-widest text-primary hover:text-white transition-all flex items-center gap-2 group">
                         Start Security Audit <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -202,7 +202,7 @@ function Settings() {
                                 }
                                 <div className="group relative flex items-center gap-8 p-8 mb-12 bg-gray-50 rounded-[32px] border border-gray-100 overflow-hidden shadow-sm transition-all hover:shadow-md">
                                     <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    <div className="relative w-28 h-28 rounded-[32px] bg-gradient-to-br from-[#22C1DC] to-[#1E3A8A] flex items-center justify-center text-white text-4xl font-bold shadow-2xl group-hover:scale-105 transition-transform border-4 border-white">
+                                    <div className="relative w-28 h-28 rounded-[32px] bg-gradient-to-br from-[#0f4184] to-[#0b3166] flex items-center justify-center text-white text-4xl font-bold shadow-2xl group-hover:scale-105 transition-transform border-4 border-white">
                                         {accountForm.name.charAt(0)}
                                     </div>
                                     <div className="relative z-10">

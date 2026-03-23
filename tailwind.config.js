@@ -13,11 +13,11 @@ export default {
   		},
   		colors: {
   			primary: {
-  				DEFAULT: "#22C1DC",
-  				dark: "#0EA5B7",
+  				DEFAULT: "#0f4184",
+  				dark: "#0b3166",
   			},
-  			secondary: "#1E3A8A",
-  			accent: "#67E8F9",
+  			secondary: "#0b3166",
+  			accent: "#1e5ab8",
   			background: "#F8FAFC",
   			foreground: "#0F172A",
   			card: "#FFFFFF",

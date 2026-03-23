@@ -33,7 +33,7 @@ function EmployeeProfile() {
                 </button>
                 <button
                     onClick={() => setIsDrawerOpen(true)}
-                    className="px-5 py-2.5 bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] text-white rounded-lg text-sm font-semibold hover:opacity-90 transition-all shadow-sm"
+                    className="px-5 py-2.5 bg-gradient-to-r from-[#0f4184] to-[#0b3166] text-white rounded-lg text-sm font-semibold hover:opacity-90 transition-all shadow-sm"
                 >
                     Edit Profile
                 </button>
@@ -53,7 +53,7 @@ function EmployeeProfile() {
                 <div className="flex items-center gap-4">
                     <h1 className="text-3xl font-bold text-textPrimary">{employee.name}</h1>
                     <span className={`px-3 py-1 rounded-full text-xs font-bold
-              ${employee.status === "Active" ? "bg-[#22C1DC]/10 text-[#0EA5B7]" : "bg-gray-100 text-gray-600"}
+              ${employee.status === "Active" ? "bg-[#0f4184]/10 text-[#0b3166]" : "bg-gray-100 text-gray-600"}
             `}>
                         {employee.status}
                     </span>
@@ -62,19 +62,19 @@ function EmployeeProfile() {
 
                 <div className="flex flex-wrap gap-6 pt-4">
                     <div className="flex items-center gap-2 text-sm text-textSecondary">
-                        <Briefcase size={16} className="text-[#22C1DC]" />
+                        <Briefcase size={16} className="text-[#0f4184]" />
                         <span className="font-medium">ID: {employee.id}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-textSecondary">
-                        <Mail size={16} className="text-[#22C1DC]" />
+                        <Mail size={16} className="text-[#0f4184]" />
                         <span className="font-medium">{(employee.name || "Employee").toLowerCase().replace(/\s+/g, ".")}@nexi5.com</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-textSecondary">
-                        <Phone size={16} className="text-[#22C1DC]" />
+                        <Phone size={16} className="text-[#0f4184]" />
                         <span className="font-medium">+1 (555) 019-2834</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-textSecondary">
-                        <MapPin size={16} className="text-[#22C1DC]" />
+                        <MapPin size={16} className="text-[#0f4184]" />
                         <span className="font-medium">San Francisco, CA</span>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ function EmployeeProfile() {
                                             <p className="text-xs font-bold text-textSecondary mt-1 uppercase tracking-wider">Logged Time</p>
                                         </div>
                                         <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-                                            <Calendar className="text-[#0EA5B7] mb-3" size={24} />
+                                            <Calendar className="text-[#0b3166] mb-3" size={24} />
                                             <p className="text-3xl font-bold text-textPrimary">18<span className="text-sm font-semibold text-textSecondary ml-1">days</span></p>
                                             <p className="text-xs font-bold text-textSecondary mt-1 uppercase tracking-wider">Days Present</p>
                                         </div>
@@ -153,9 +153,9 @@ function EmployeeProfile() {
                                 <h3 className="text-lg font-bold text-textPrimary">Attendance Summary</h3>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                                <div className="bg-[#22C1DC]/10 p-6 rounded-xl border border-[#22C1DC]/20">
+                                <div className="bg-[#0f4184]/10 p-6 rounded-xl border border-[#0f4184]/20">
                                     <p className="text-xs font-bold text-primary uppercase tracking-wider mb-1">Present</p>
-                                    <p className="text-3xl font-bold text-[#0EA5B7]">18 days</p>
+                                    <p className="text-3xl font-bold text-[#0b3166]">18 days</p>
                                 </div>
                                 <div className="bg-red-50 p-6 rounded-xl border border-red-100">
                                     <p className="text-xs font-bold text-red-500 uppercase tracking-wider mb-1">Absent</p>
@@ -182,8 +182,8 @@ function EmployeeProfile() {
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
                                         {[
-                                            { date: "Oct 25, 2024", in: "09:05 AM", out: "06:10 PM", status: "Present", color: "text-[#0EA5B7] bg-[#22C1DC]/10" },
-                                            { date: "Oct 24, 2024", in: "09:00 AM", out: "06:00 PM", status: "Present", color: "text-[#0EA5B7] bg-[#22C1DC]/10" },
+                                            { date: "Oct 25, 2024", in: "09:05 AM", out: "06:10 PM", status: "Present", color: "text-[#0b3166] bg-[#0f4184]/10" },
+                                            { date: "Oct 24, 2024", in: "09:00 AM", out: "06:00 PM", status: "Present", color: "text-[#0b3166] bg-[#0f4184]/10" },
                                             { date: "Oct 23, 2024", in: "10:30 AM", out: "06:15 PM", status: "Late", color: "text-orange-500 bg-orange-100" },
                                             { date: "Oct 22, 2024", in: "--", out: "--", status: "Absent", color: "text-red-500 bg-red-100" }
                                         ].map((record, i) => <tr key={i} className="hover:bg-[#F0F9FF] transition-colors">
@@ -218,7 +218,7 @@ function EmployeeProfile() {
                                             <td className="px-6 py-4 font-bold text-textPrimary">October 2024</td>
                                             <td className="px-6 py-4 text-textSecondary font-bold">$9,000</td>
                                             <td className="px-6 py-4">
-                                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#22C1DC]/10 text-[#0EA5B7]">Paid</span>
+                                                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#0f4184]/10 text-[#0b3166]">Paid</span>
                                             </td>
                                             <td className="px-6 py-4 text-right">
                                                 <button className="text-primary hover:text-primaryDark font-bold flex items-center justify-end gap-2 ml-auto transition-colors">
@@ -262,10 +262,10 @@ function EmployeeProfile() {
                                 <div className="flex-1 space-y-6">
                                     <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Performance Metrics</h4>
                                     {[
-                                        { label: "Technical Skills", score: 4.8, color: "bg-[#22C1DC]" },
-                                        { label: "Communication", score: 4.2, color: "bg-[#1E3A8A]" },
+                                        { label: "Technical Skills", score: 4.8, color: "bg-[#0f4184]" },
+                                        { label: "Communication", score: 4.2, color: "bg-[#0b3166]" },
                                         { label: "Problem Solving", score: 4.5, color: "bg-primary" },
-                                        { label: "Teamwork", score: 4.9, color: "bg-[#0EA5B7]" }
+                                        { label: "Teamwork", score: 4.9, color: "bg-[#0b3166]" }
                                     ].map((criteria) => <div key={criteria.label} className="space-y-3">
                                         <div className="flex justify-between text-sm">
                                             <span className="font-bold text-textPrimary">{criteria.label}</span>

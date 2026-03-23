@@ -56,7 +56,7 @@ function Directory() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-                { label: "Engineering", value: employees.filter((e) => e.department === "Engineering").length, icon: Briefcase, color: "text-[#22C1DC] bg-[#22C1DC]/10" },
+                { label: "Engineering", value: employees.filter((e) => e.department === "Engineering").length, icon: Briefcase, color: "text-[#0f4184] bg-[#0f4184]/10" },
                 { label: "Marketing", value: employees.filter((e) => e.department === "Marketing").length, icon: TrendingUp, color: "text-orange-500 bg-orange-50" },
                 { label: "Active Now", value: employees.filter((e) => e.status === "Active").length, icon: CheckCircle2, color: "text-emerald-500 bg-emerald-50" },
                 { label: "On Leave", value: employees.filter((e) => e.status === "On Leave").length, icon: Clock, color: "text-blue-500 bg-blue-50" }
@@ -134,7 +134,7 @@ function Directory() {
                         <div className="flex flex-col items-center text-center relative mb-6">
                             <div className="relative mb-4">
                                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full scale-125 opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#22C1DC] to-primary flex items-center justify-center text-white text-xl font-bold border-2 border-white shadow-lg relative z-10 transition-transform group-hover:scale-105 uppercase tracking-tighter">
+                                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0f4184] to-primary flex items-center justify-center text-white text-xl font-bold border-2 border-white shadow-lg relative z-10 transition-transform group-hover:scale-105 uppercase tracking-tighter">
                                     {getInitials(emp.name)}
                                 </div>
                                 <div className={`absolute -bottom-1 -right-1 w-5 h-5 rounded-full border-4 border-white z-20 ${status.dot} ${emp.status === "Active" ? "shadow-[0_0_8px_rgba(16,185,129,0.5)]" : ""}`} />

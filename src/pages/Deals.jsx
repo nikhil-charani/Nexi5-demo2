@@ -5,7 +5,7 @@ import { useAppContext } from "../hooks/useAppContext";
 import DealDrawer from "../components/drawers/DealDrawer";
 const STAGE_CONFIG = {
     Discovery: { bg: "bg-blue-100", text: "text-blue-600", dot: "bg-blue-500" },
-    Proposal: { bg: "bg-[#22C1DC]/10", text: "text-[#0EA5B7]", dot: "bg-[#22C1DC]" },
+    Proposal: { bg: "bg-[#0f4184]/10", text: "text-[#0b3166]", dot: "bg-[#0f4184]" },
     Negotiation: { bg: "bg-purple-100", text: "text-purple-600", dot: "bg-purple-500" },
     "Closed Won": { bg: "bg-emerald-100", text: "text-emerald-600", dot: "bg-emerald-500" },
     "Closed Lost": { bg: "bg-red-100", text: "text-red-600", dot: "bg-red-500" }
@@ -41,7 +41,7 @@ function Deals() {
             </div>
             <button
                 onClick={openAdd}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 <Plus size={18} /> Add Deal
             </button>
@@ -52,8 +52,8 @@ function Deals() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-                { label: "Pipeline Value", value: `$${(totalValue / 1e3).toFixed(0)}k`, icon: BriefcaseBusiness, color: "text-[#22C1DC] bg-[#22C1DC]/10" },
-                { label: "Active Deals", value: deals.length, icon: Target, color: "text-[#1E3A8A] bg-[#1E3A8A]/10" },
+                { label: "Pipeline Value", value: `$${(totalValue / 1e3).toFixed(0)}k`, icon: BriefcaseBusiness, color: "text-[#0f4184] bg-[#0f4184]/10" },
+                { label: "Active Deals", value: deals.length, icon: Target, color: "text-[#0b3166] bg-[#0b3166]/10" },
                 { label: "Win Rate", value: "42%", icon: TrendingUp, color: "text-emerald-500 bg-emerald-50" },
                 { label: "Avg Size", value: `$${(totalValue / deals.length / 1e3).toFixed(1)}k`, icon: DollarSign, color: "text-purple-500 bg-purple-50" }
             ].map((stat, i) => <motion.div

@@ -41,7 +41,7 @@ function Leads() {
             </div>
             <button
                 onClick={openAdd}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 <Plus size={18} /> New Lead
             </button>
@@ -52,7 +52,7 @@ function Leads() {
         }
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
             {[
-                { label: "Total Leads", value: leads.length, icon: TrendingUp, gradient: "from-[#22C1DC] to-[#1E3A8A]" },
+                { label: "Total Leads", value: leads.length, icon: TrendingUp, gradient: "from-[#0f4184] to-[#0b3166]" },
                 { label: "Fresh Inquiry", value: leads.filter((l) => l.status === "New").length, icon: Zap, gradient: "from-orange-400 to-rose-500" },
                 { label: "Qualified", value: leads.filter((l) => l.status === "Qualified").length, icon: Target, gradient: "from-blue-500 to-indigo-600" },
                 { label: "Converted", value: leads.filter((l) => l.status === "Converted").length, icon: Globe, gradient: "from-emerald-400 to-teal-500" }

@@ -37,7 +37,7 @@ import brandLogo from "../assets/Nexi5Logo-1.png";
 const navGroups = [
   {
     name: "Core",
-    color: "#22C1DC",
+    color: "#0f4184",
     items: [
       { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard, roles: ["Admin", "HR", "HR Head", "HR Recruiter", "HR Accountant", "Manager", "Employee", "BDE"] },
       { name: "Calendar", path: "/dashboard/calendar", icon: CalendarDays, roles: ["Admin", "HR", "HR Head", "HR Recruiter", "Manager", "Employee", "BDE"] },
@@ -46,7 +46,7 @@ const navGroups = [
   },
   {
     name: "Human Resources",
-    color: "#22C1DC",
+    color: "#0f4184",
     items: [
       { name: "Employees", path: "/dashboard/employees", icon: Users, roles: ["Admin", "HR Head", "HR Recruiter", "HR Accountant"] },
       { name: "Directory", path: "/dashboard/directory", icon: Contact2, roles: ["Admin", "HR Head", "HR Recruiter", "HR Accountant", "Manager", "Employee", "BDE"] },
@@ -56,7 +56,7 @@ const navGroups = [
   },
   {
     name: "Work & Operations",
-    color: "#22C1DC",
+    color: "#0f4184",
     items: [
       { name: "Projects", path: "/dashboard/projects", icon: FolderKanban, roles: ["Admin", "Manager", "Employee"] },
       { name: "Tasks", path: "/dashboard/tasks", icon: ClipboardList, roles: ["Admin", "Manager", "Employee", "HR Recruiter", "HR Accountant"] },
@@ -69,7 +69,7 @@ const navGroups = [
   },
   {
     name: "Business & CRM",
-    color: "#22C1DC",
+    color: "#0f4184",
     items: [
       { name: "Leads", path: "/dashboard/leads", icon: Target, roles: ["Admin", "BDE", "Manager"] },
       { name: "Clients", path: "/dashboard/clients", icon: Users2, roles: ["Admin", "BDE", "Manager"] },
@@ -78,7 +78,7 @@ const navGroups = [
   },
   {
     name: "Administration",
-    color: "#22C1DC",
+    color: "#0f4184",
     items: [
       { name: "Grievances", path: "/dashboard/grievances", icon: ShieldAlert, roles: ["Admin", "HR Head", "HR Recruiter", "HR Accountant", "Manager", "Employee"] },
       { name: "Settings", path: "/dashboard/settings", icon: Settings, roles: ["Admin"] }
@@ -197,7 +197,7 @@ function DashboardLayout() {
                             className={({ isActive }) => `
                             relative flex items-center ${isSidebarOpen || mobile ? "gap-4 px-4" : "justify-center px-0"} py-3.5 rounded-[16px] transition-all duration-300 group/nav
                             ${isActive
-                                ? "bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] text-white shadow-lg shadow-[#22C1DC]/30 font-extrabold"
+                                ? "bg-gradient-to-r from-[#0f4184] to-[#0b3166] text-white shadow-lg shadow-[#0f4184]/30 font-extrabold"
                                 : "text-slate-500 hover:bg-slate-50 hover:text-primary border border-transparent hover:border-gray-100"}
                           `}
                           >
@@ -268,7 +268,7 @@ function DashboardLayout() {
             onClick={() => setIsProfilePopupOpen(!isProfilePopupOpen)}
             className={`w-full flex items-center ${isSidebarOpen || mobile ? "gap-3 px-2" : "justify-center px-0"} py-2 rounded-xl transition-all hover:bg-gray-100 group/profile`}
           >
-            <div className={`shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[#1E3A8A] text-white flex items-center justify-center font-bold text-sm uppercase overflow-hidden shadow-sm group-hover/profile:scale-105 transition-all`}>
+            <div className={`shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-[#0b3166] text-white flex items-center justify-center font-bold text-sm uppercase overflow-hidden shadow-sm group-hover/profile:scale-105 transition-all`}>
               {getInitials(currentUser?.name)}
             </div>
             

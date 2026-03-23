@@ -4,8 +4,8 @@ import { Plus, Megaphone, Pin, Calendar, Tag, X } from "lucide-react";
 import { mockAnnouncements } from "../data/mockData";
 import { toast } from "sonner";
 const CATEGORY_STYLES = {
-    "Holiday": { bg: "bg-[#22C1DC]/10", text: "text-[#0EA5B7]", dot: "bg-[#22C1DC]" },
-    "Company Update": { bg: "bg-[#1E3A8A]/10", text: "text-[#1E3A8A]", dot: "bg-[#1E3A8A]" },
+    "Holiday": { bg: "bg-[#0f4184]/10", text: "text-[#0b3166]", dot: "bg-[#0f4184]" },
+    "Company Update": { bg: "bg-[#0b3166]/10", text: "text-[#0b3166]", dot: "bg-[#0b3166]" },
     "HR Announcement": { bg: "bg-cyan-50", text: "text-cyan-600", dot: "bg-cyan-500" },
     "General": { bg: "bg-gray-100", text: "text-gray-600", dot: "bg-gray-400" }
 };
@@ -88,7 +88,7 @@ function Announcements() {
             </div>
             <button
                 onClick={() => setModalOpen(true)}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 <Plus size={18} /> Post Announcement
             </button>
@@ -177,7 +177,7 @@ function Announcements() {
                         <button onClick={() => setModalOpen(false)} className="px-6 py-2.5 text-sm font-bold text-textSecondary hover:bg-gray-100 rounded-lg transition-all">Cancel</button>
                         <button
                             onClick={postAnnouncement}
-                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                         >
                             Publish Announcement
                         </button>

@@ -13,13 +13,13 @@ const historyData = [
     { date: "Mon, Nov 11", checkIn: "08:55 AM", checkOut: "06:05 PM", hours: "9h 10m", status: "Present" }
 ];
 const STATUS_CLASS = {
-    Present: "bg-[#22C1DC]/10 text-[#0EA5B7]",
+    Present: "bg-[#0f4184]/10 text-[#0b3166]",
     "On Leave": "bg-orange-100 text-orange-600",
     "Half Day": "bg-blue-100 text-blue-600",
     Absent: "bg-red-100 text-red-600"
 };
 const STATUS_DOT = {
-    Present: "bg-[#22C1DC]",
+    Present: "bg-[#0f4184]",
     "On Leave": "bg-orange-500",
     "Half Day": "bg-blue-500",
     Absent: "bg-red-500"
@@ -72,7 +72,7 @@ function Attendance() {
         }
         {isAdminOrHR ? <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-                { label: "Present Today", value: "165", icon: CheckCircle2, color: "text-[#0EA5B7] bg-[#22C1DC]/10" },
+                { label: "Present Today", value: "165", icon: CheckCircle2, color: "text-[#0b3166] bg-[#0f4184]/10" },
                 { label: "On Leave", value: "15", icon: CalendarDays, color: "text-orange-500 bg-orange-50" },
                 { label: "Avg Check-in", value: "09:12 AM", icon: Clock, color: "text-blue-500 bg-blue-50" },
                 { label: "Avg Hours/Day", value: "8h 24m", icon: TrendingUp, color: "text-purple-500 bg-purple-50" }
@@ -95,7 +95,7 @@ function Attendance() {
             {
                 /* Check-in card */
             }
-            <div className="bg-gradient-to-br from-[#1E3A8A] to-[#0F172A] rounded-2xl p-6 relative overflow-hidden border border-[#1E3A8A]/20 flex items-center gap-6 shadow-xl group">
+            <div className="bg-gradient-to-br from-[#0b3166] to-[#0F172A] rounded-2xl p-6 relative overflow-hidden border border-[#0b3166]/20 flex items-center gap-6 shadow-xl group">
                 <div className={`absolute inset-0 opacity-30 bg-gradient-to-br ${isCheckedIn ? "from-red-500 to-transparent" : "from-primary to-transparent"} blur-3xl`} />
                 <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -124,7 +124,7 @@ function Attendance() {
                 </div>
             </div>
             {[
-                { label: "Days Present", value: "18 / 22", icon: CheckCircle2, color: "text-[#0EA5B7] bg-[#22C1DC]/10" },
+                { label: "Days Present", value: "18 / 22", icon: CheckCircle2, color: "text-[#0b3166] bg-[#0f4184]/10" },
                 { label: "Avg Hours/Day", value: "8h 15m", icon: Clock, color: "text-blue-500 bg-blue-50" }
             ].map((stat, i) => <div
                 key={i}

@@ -5,7 +5,7 @@ import { useAppContext } from "../hooks/useAppContext";
 import { toast } from "sonner";
 import { DropdownMenu, DropdownMenuItem } from "../components/ui/dropdown";
 const STATUS_COLORS = {
-    Approved: { bg: "bg-[#22C1DC]/10", text: "text-[#0EA5B7]", dot: "bg-[#22C1DC]" },
+    Approved: { bg: "bg-[#0f4184]/10", text: "text-[#0b3166]", dot: "bg-[#0f4184]" },
     Pending: { bg: "bg-orange-100", text: "text-orange-600", dot: "bg-orange-500" },
     Rejected: { bg: "bg-red-100", text: "text-red-600", dot: "bg-red-500" }
 };
@@ -90,7 +90,7 @@ function Leave() {
             {canApply && (
                 <button
                     onClick={() => setModalOpen(true)}
-                    className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-bold bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all shadow-sm"
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-sm font-bold bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all shadow-sm"
                 >
                     <Plus size={18} /> Apply Leave
                 </button>
@@ -106,7 +106,7 @@ function Leave() {
                 const colors = {
                     All: "text-primary bg-primary/5 border-primary/20",
                     Pending: "text-orange-600 bg-orange-50 border-orange-100",
-                    Approved: "text-[#0EA5B7] bg-[#22C1DC]/10 border-[#22C1DC]/20",
+                    Approved: "text-[#0b3166] bg-[#0f4184]/10 border-[#0f4184]/20",
                     Rejected: "text-red-600 bg-red-50 border-red-100"
                 };
                 return <button
@@ -169,7 +169,7 @@ function Leave() {
                         >
                             <td className="px-6 py-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#22C1DC] to-[#1E3A8A] text-white flex items-center justify-center text-sm font-bold shadow-sm">
+                                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#0f4184] to-[#0b3166] text-white flex items-center justify-center text-sm font-bold shadow-sm">
                                         {leave.employeeName.charAt(0)}
                                     </div>
                                     <div>
@@ -204,7 +204,7 @@ function Leave() {
                                     <DropdownMenuItem onClick={() => {
                                         approveLeave(leave.id);
                                         toast.success("Leave Approved", { description: `${leave.employeeName}'s request approved.` });
-                                    }} className="text-[#0EA5B7]">
+                                    }} className="text-[#0b3166]">
                                         <Check size={14} /> Approve
                                     </DropdownMenuItem>
                                     <DropdownMenuItem onClick={() => {
@@ -290,7 +290,7 @@ function Leave() {
                         </button>
                         <button
                             onClick={handleSubmit}
-                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                            className="px-8 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                         >
                             Submit Request
                         </button>

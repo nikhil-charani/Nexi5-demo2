@@ -11,10 +11,10 @@ const initialDocs = [
     { id: "d6", name: "PF_Form_2024.pdf", size: "310 KB", date: "Nov 01, 2024", category: "Tax Forms", type: "PDF", status: "Under Review" }
 ];
 const folderConfig = [
-    { name: "Company Policies", color: "text-[#22C1DC]", bg: "bg-[#22C1DC]/10", gradient: "from-[#22C1DC] to-[#1E3A8A]" },
-    { name: "Employee Contracts", color: "text-[#22C1DC]", bg: "bg-[#22C1DC]/10", gradient: "from-[#22C1DC] to-[#0EA5B7]" },
-    { name: "Tax Forms", color: "text-[#22C1DC]", bg: "bg-[#22C1DC]/10", gradient: "from-[#0EA5B7] to-[#1E3A8A]" },
-    { name: "Templates", color: "text-[#22C1DC]", bg: "bg-[#22C1DC]/10", gradient: "from-[#22C1DC] to-[#67E8F9]" }
+    { name: "Company Policies", color: "text-[#0f4184]", bg: "bg-[#0f4184]/10", gradient: "from-[#0f4184] to-[#0b3166]" },
+    { name: "Employee Contracts", color: "text-[#0f4184]", bg: "bg-[#0f4184]/10", gradient: "from-[#0f4184] to-[#0b3166]" },
+    { name: "Tax Forms", color: "text-[#0f4184]", bg: "bg-[#0f4184]/10", gradient: "from-[#0b3166] to-[#0b3166]" },
+    { name: "Templates", color: "text-[#0f4184]", bg: "bg-[#0f4184]/10", gradient: "from-[#0f4184] to-[#67E8F9]" }
 ];
 function StatusBadge({ status }) {
     const isVerified = status === "Verified";
@@ -97,7 +97,7 @@ function Documents() {
                 </div>
                 <button
                     onClick={() => fileInputRef.current?.click()}
-                    className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                    className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                 >
                     <UploadCloud size={18} /> Upload Files
                 </button>
@@ -120,7 +120,7 @@ function Documents() {
                 handleUpload(e.dataTransfer.files);
             }}
             animate={{
-                borderColor: isDragging ? "#22C1DC" : "#E2E8F0",
+                borderColor: isDragging ? "#0f4184" : "#E2E8F0",
                 backgroundColor: isDragging ? "rgba(34, 193, 220, 0.05)" : "#F8FAFC"
             }}
             className="border-2 border-dashed rounded-2xl p-8 flex flex-col items-center text-center transition-all cursor-pointer group bg-[#F8FAFC]/50"
@@ -319,7 +319,7 @@ function Documents() {
                         <button onClick={() => setViewDoc(null)} className="px-6 py-3 text-sm font-bold text-textSecondary hover:bg-white hover:text-textPrimary rounded-xl transition-all hover:shadow-sm border border-transparent hover:border-gray-100">Close</button>
                         <button
                             onClick={() => handleDownload(viewDoc)}
-                            className="px-8 py-3 text-sm font-bold text-white rounded-xl shadow-md flex items-center gap-2 bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                            className="px-8 py-3 text-sm font-bold text-white rounded-xl shadow-md flex items-center gap-2 bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
                         >
                             <Download size={18} /> Download Now
                         </button>

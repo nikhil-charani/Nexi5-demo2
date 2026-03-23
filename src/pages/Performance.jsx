@@ -46,7 +46,7 @@ function Performance() {
             <button
                 onClick={handleStartCycle}
                 disabled={loadingCycle}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl text-white text-sm font-bold shadow-sm disabled:opacity-70 bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all"
             >
                 {loadingCycle ? <Loader2 size={18} className="animate-spin" /> : <Zap size={18} />}
                 {loadingCycle ? "Initializing Cycle..." : "New Review Cycle"}
@@ -58,7 +58,7 @@ function Performance() {
         }
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-                { label: "Company Avg Score", value: "4.2", sub: "/5.0", icon: TrendingUp, gradient: "from-[#22C1DC] to-[#1E3A8A]" },
+                { label: "Company Avg Score", value: "4.2", sub: "/5.0", icon: TrendingUp, gradient: "from-[#0f4184] to-[#0b3166]" },
                 { label: "Top Performers", value: "12%", sub: "of staff", icon: Star, gradient: "from-orange-400 to-rose-500" },
                 { label: "Pending Reviews", value: "24", sub: "due this week", icon: MessageSquare, gradient: "from-blue-500 to-indigo-600" }
             ].map((stat, i) => <motion.div
@@ -200,7 +200,7 @@ function Performance() {
                 >
                     <div className="p-6 border-b border-gray-50 flex justify-between items-center bg-gray-50/50">
                         <div className="flex items-center gap-4">
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#22C1DC] to-[#1E3A8A] flex items-center justify-center text-white text-xl font-bold shrink-0 shadow-lg group-hover:rotate-3 transition-transform">
+                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0f4184] to-[#0b3166] flex items-center justify-center text-white text-xl font-bold shrink-0 shadow-lg group-hover:rotate-3 transition-transform">
                                 {activeEmployee.name.charAt(0)}
                             </div>
                             <div>
@@ -231,7 +231,7 @@ function Performance() {
                                             <motion.div
                                                 initial={{ width: 0 }}
                                                 animate={{ width: `${percent}%` }}
-                                                className="bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] h-full rounded-full shadow-lg"
+                                                className="bg-gradient-to-r from-[#0f4184] to-[#0b3166] h-full rounded-full shadow-lg"
                                             />
                                         </div>
                                     </div>;
@@ -260,7 +260,7 @@ function Performance() {
                                         <span className="text-[11px] font-bold text-textSecondary uppercase tracking-widest">5.0</span>
                                     </div>
                                 </div>
-                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#22C1DC] to-[#1E3A8A] flex flex-col items-center justify-center text-white shadow-xl border border-white/20">
+                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0f4184] to-[#0b3166] flex flex-col items-center justify-center text-white shadow-xl border border-white/20">
                                     <span className="text-2xl font-bold leading-none">{editScore.toFixed(1)}</span>
                                     <span className="text-[8px] font-bold uppercase tracking-widest mt-1 opacity-80">Rating</span>
                                 </div>
@@ -272,7 +272,7 @@ function Performance() {
                         <button onClick={() => setSelectedEmpId(null)} className="px-6 py-3 text-sm font-bold text-textSecondary hover:bg-white hover:text-textPrimary rounded-xl transition-all hover:shadow-sm border border-transparent hover:border-gray-100">Cancel</button>
                         {canEditScore && <button
                             onClick={handleSaveScore}
-                            className="px-10 py-3 text-sm font-bold text-white rounded-xl shadow-md bg-gradient-to-r from-[#22C1DC] to-[#1E3A8A] hover:opacity-90 transition-all border border-white/10"
+                            className="px-10 py-3 text-sm font-bold text-white rounded-xl shadow-md bg-gradient-to-r from-[#0f4184] to-[#0b3166] hover:opacity-90 transition-all border border-white/10"
                         >
                             Commit Final Review
                         </button>}
