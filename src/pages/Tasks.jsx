@@ -141,14 +141,14 @@ function Tasks() {
         {
             /* Main View Area */
         }
-        {viewMode === "kanban" ? <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 flex-1 min-h-0 overflow-hidden">
+        {viewMode === "kanban" ? <div className="flex lg:grid lg:grid-cols-3 gap-5 flex-1 min-h-0 overflow-x-auto pb-2 lg:overflow-hidden">
             {["Pending", "In Progress", "Completed"].map((col) => {
                 const isOver = dragOverCol === col;
                 const colColor = col === "Pending" ? "bg-slate-400" : col === "In Progress" ? "bg-blue-500" : "bg-emerald-500";
                 const colRing = col === "Pending" ? "ring-slate-300" : col === "In Progress" ? "ring-blue-400" : "ring-emerald-400";
                 return <div
                     key={col}
-                    className="flex flex-col h-full min-h-[400px]"
+                    className="flex flex-col h-full min-h-[400px] min-w-[280px] lg:min-w-0 flex-shrink-0 lg:flex-shrink"
                     onDragOver={(e) => handleDragOver(e, col)}
                     onDragLeave={() => setDragOverCol(null)}
                     onDrop={(e) => handleDrop(e, col)}

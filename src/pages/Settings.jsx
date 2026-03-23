@@ -121,7 +121,7 @@ function Settings() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2, type: "spring", stiffness: 300, damping: 30 }}
-                        className="bg-white rounded-[40px] shadow-sm border border-gray-100 p-10 flex-1 overflow-y-auto custom-scrollbar relative"
+                        className="bg-white rounded-[40px] shadow-sm border border-gray-100 p-5 md:p-10 flex-1 overflow-y-auto custom-scrollbar relative"
                     >
                         <div className="absolute top-0 right-0 w-72 h-72 bg-primary/5 blur-[100px] rounded-full -mr-32 -mt-32 pointer-events-none" />
 

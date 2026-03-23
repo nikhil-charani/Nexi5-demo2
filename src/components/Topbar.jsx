@@ -85,7 +85,7 @@ function Topbar({ onMenuToggle }) {
     }
     return () => clearInterval(interval);
   }, [isCheckedIn, checkInTime]);
-  return <header className="h-[100px] glass border-b border-gray-100/50 px-10 flex items-center justify-between sticky top-0 z-30 gap-10 flex-shrink-0 topbar-shadow">
+  return <header className="h-[70px] md:h-[85px] lg:h-[100px] glass border-b border-gray-100/50 px-4 sm:px-6 lg:px-10 flex items-center justify-between sticky top-0 z-30 gap-3 sm:gap-6 lg:gap-10 flex-shrink-0 topbar-shadow">
 
     {
       /* Left: Mobile menu + Page Title */
@@ -98,10 +98,10 @@ function Topbar({ onMenuToggle }) {
         <Menu size={20} />
       </button>
       <div className="flex flex-col">
-        <h1 className="text-[18px] font-black gradient-text tracking-tight uppercase leading-none">
+        <h1 className="text-[14px] md:text-[16px] lg:text-[18px] font-black gradient-text tracking-tight uppercase leading-none">
           Welcome, {currentUser?.name?.split(" ")[0] || "User"}
         </h1>
-        <p className="text-[10px] font-black text-primary uppercase tracking-[0.3em] mt-1.5 opacity-60">
+        <p className="hidden sm:block text-[10px] font-black text-primary uppercase tracking-[0.3em] mt-1.5 opacity-60">
           {currentUser?.role || "Core Node"} Perspective
         </p>
       </div>
