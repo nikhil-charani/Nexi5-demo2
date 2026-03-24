@@ -22,7 +22,9 @@ app.use(morgan("dev"));
 
 
 app.use("/api", routes);
-
+app.get("/", (req, res) => {
+  res.send("HRM Portal API is running...");
+});
 
 app.use(errorhandler);
 
