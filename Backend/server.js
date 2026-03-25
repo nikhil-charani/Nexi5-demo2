@@ -3,6 +3,12 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 require("dotenv").config();
+const dns = require("dns");
+
+// Force IPv4 for all network connections (Fixes ENETUNREACH on Render/IPv6)
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder("ipv4first");
+}
 
 const routes = require("./routes/index");
 const { errorhandler,asynchandler} = require("./middleware/errorhandler");
